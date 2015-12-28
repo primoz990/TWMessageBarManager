@@ -131,10 +131,11 @@ static UIColor *kTWMesssageBarDemoControllerButtonColor = nil;
 
 - (void)errorButtonPressed:(id)sender
 {
+
     [[TWMessageBarManager sharedInstance] showMessageWithTitle:kStringMessageBarErrorTitle
                                                    description:kStringMessageBarErrorMessage
                                                           type:TWMessageBarMessageTypeError
-                                                statusBarStyle:UIStatusBarStyleLightContent
+                                                  durationType:TWMessageBarDurationTypeShort
                                                       callback:nil];
 }
 
@@ -143,7 +144,7 @@ static UIColor *kTWMesssageBarDemoControllerButtonColor = nil;
     [[TWMessageBarManager sharedInstance] showMessageWithTitle:kStringMessageBarSuccessTitle
                                                    description:kStringMessageBarSuccessMessage
                                                           type:TWMessageBarMessageTypeSuccess
-                                                statusBarStyle:UIStatusBarStyleDefault
+                                                  durationType:TWMessageBarDurationTypeShort
                                                       callback:nil];
 }
 
@@ -152,7 +153,7 @@ static UIColor *kTWMesssageBarDemoControllerButtonColor = nil;
     [[TWMessageBarManager sharedInstance] showMessageWithTitle:kStringMessageBarInfoTitle
                                                    description:kStringMessageBarInfoMessage
                                                           type:TWMessageBarMessageTypeInfo
-                                               statusBarHidden:YES
+                                                  durationType:TWMessageBarDurationTypeShort
                                                       callback:nil];
 }
 

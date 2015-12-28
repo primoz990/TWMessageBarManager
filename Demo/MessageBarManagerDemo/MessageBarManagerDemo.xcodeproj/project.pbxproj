@@ -15,15 +15,15 @@
 		564982621741BF7A00077B8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564982611741BF7A00077B8C /* CoreGraphics.framework */; };
 		564982681741BF7A00077B8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 564982661741BF7A00077B8C /* InfoPlist.strings */; };
 		5649826A1741BF7A00077B8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 564982691741BF7A00077B8C /* main.m */; };
-		5669FE421766C47700B8630B /* icon-error.png in Resources */ = {isa = PBXBuildFile; fileRef = 5669FE3C1766C47700B8630B /* icon-error.png */; };
-		5669FE431766C47700B8630B /* icon-error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5669FE3D1766C47700B8630B /* icon-error@2x.png */; };
-		5669FE441766C47700B8630B /* icon-info.png in Resources */ = {isa = PBXBuildFile; fileRef = 5669FE3E1766C47700B8630B /* icon-info.png */; };
-		5669FE451766C47700B8630B /* icon-info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5669FE3F1766C47700B8630B /* icon-info@2x.png */; };
-		5669FE461766C47700B8630B /* icon-success.png in Resources */ = {isa = PBXBuildFile; fileRef = 5669FE401766C47700B8630B /* icon-success.png */; };
-		5669FE471766C47700B8630B /* icon-success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5669FE411766C47700B8630B /* icon-success@2x.png */; };
 		569FCDF81741C09300F2B74C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 569FCDF41741C09300F2B74C /* AppDelegate.m */; };
 		569FCDF91741C09300F2B74C /* TWMesssageBarDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 569FCDF71741C09300F2B74C /* TWMesssageBarDemoController.m */; };
 		9B903012185BA74B005BCFF5 /* TWMessageBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B903011185BA74B005BCFF5 /* TWMessageBarManager.m */; };
+		9D85D5751C311A5F00A36F17 /* ic_msg_error.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D85D56F1C311A5F00A36F17 /* ic_msg_error.png */; };
+		9D85D5761C311A5F00A36F17 /* ic_msg_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D85D5701C311A5F00A36F17 /* ic_msg_error@2x.png */; };
+		9D85D5771C311A5F00A36F17 /* ic_msg_info.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D85D5711C311A5F00A36F17 /* ic_msg_info.png */; };
+		9D85D5781C311A5F00A36F17 /* ic_msg_info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D85D5721C311A5F00A36F17 /* ic_msg_info@2x.png */; };
+		9D85D5791C311A5F00A36F17 /* ic_msg_success.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D85D5731C311A5F00A36F17 /* ic_msg_success.png */; };
+		9D85D57A1C311A5F00A36F17 /* ic_msg_success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D85D5741C311A5F00A36F17 /* ic_msg_success@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,12 +38,6 @@
 		564982671741BF7A00077B8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		564982691741BF7A00077B8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5649826B1741BF7A00077B8C /* MessageBarManagerDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MessageBarManagerDemo-Prefix.pch"; sourceTree = "<group>"; };
-		5669FE3C1766C47700B8630B /* icon-error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-error.png"; sourceTree = "<group>"; };
-		5669FE3D1766C47700B8630B /* icon-error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-error@2x.png"; sourceTree = "<group>"; };
-		5669FE3E1766C47700B8630B /* icon-info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-info.png"; sourceTree = "<group>"; };
-		5669FE3F1766C47700B8630B /* icon-info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-info@2x.png"; sourceTree = "<group>"; };
-		5669FE401766C47700B8630B /* icon-success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-success.png"; sourceTree = "<group>"; };
-		5669FE411766C47700B8630B /* icon-success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-success@2x.png"; sourceTree = "<group>"; };
 		569FCDF31741C09300F2B74C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		569FCDF41741C09300F2B74C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		569FCDF61741C09300F2B74C /* TWMesssageBarDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMesssageBarDemoController.h; sourceTree = "<group>"; };
@@ -51,6 +45,12 @@
 		56DE553917458AB20026B7D2 /* StringConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringConstants.h; sourceTree = "<group>"; };
 		9B903010185BA74B005BCFF5 /* TWMessageBarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWMessageBarManager.h; path = ../../../Classes/TWMessageBarManager.h; sourceTree = "<group>"; };
 		9B903011185BA74B005BCFF5 /* TWMessageBarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWMessageBarManager.m; path = ../../../Classes/TWMessageBarManager.m; sourceTree = "<group>"; };
+		9D85D56F1C311A5F00A36F17 /* ic_msg_error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_msg_error.png; sourceTree = "<group>"; };
+		9D85D5701C311A5F00A36F17 /* ic_msg_error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_msg_error@2x.png"; sourceTree = "<group>"; };
+		9D85D5711C311A5F00A36F17 /* ic_msg_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_msg_info.png; sourceTree = "<group>"; };
+		9D85D5721C311A5F00A36F17 /* ic_msg_info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_msg_info@2x.png"; sourceTree = "<group>"; };
+		9D85D5731C311A5F00A36F17 /* ic_msg_success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_msg_success.png; sourceTree = "<group>"; };
+		9D85D5741C311A5F00A36F17 /* ic_msg_success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_msg_success@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,12 +131,12 @@
 		5669FE3B1766C47700B8630B /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				5669FE3C1766C47700B8630B /* icon-error.png */,
-				5669FE3D1766C47700B8630B /* icon-error@2x.png */,
-				5669FE3E1766C47700B8630B /* icon-info.png */,
-				5669FE3F1766C47700B8630B /* icon-info@2x.png */,
-				5669FE401766C47700B8630B /* icon-success.png */,
-				5669FE411766C47700B8630B /* icon-success@2x.png */,
+				9D85D56F1C311A5F00A36F17 /* ic_msg_error.png */,
+				9D85D5701C311A5F00A36F17 /* ic_msg_error@2x.png */,
+				9D85D5711C311A5F00A36F17 /* ic_msg_info.png */,
+				9D85D5721C311A5F00A36F17 /* ic_msg_info@2x.png */,
+				9D85D5731C311A5F00A36F17 /* ic_msg_success.png */,
+				9D85D5741C311A5F00A36F17 /* ic_msg_success@2x.png */,
 			);
 			name = Icons;
 			path = ../../../../Classes/Icons;
@@ -212,7 +212,7 @@
 		564982521741BF7A00077B8C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Terry Worona";
 			};
 			buildConfigurationList = 564982551741BF7A00077B8C /* Build configuration list for PBXProject "MessageBarManagerDemo" */;
@@ -240,13 +240,13 @@
 				564982681741BF7A00077B8C /* InfoPlist.strings in Resources */,
 				561DB437174AFADA006D7D1E /* Default-568h@2x.png in Resources */,
 				561DB438174AFADA006D7D1E /* Default.png in Resources */,
+				9D85D5791C311A5F00A36F17 /* ic_msg_success.png in Resources */,
+				9D85D57A1C311A5F00A36F17 /* ic_msg_success@2x.png in Resources */,
 				561DB439174AFADA006D7D1E /* Default@2x.png in Resources */,
-				5669FE421766C47700B8630B /* icon-error.png in Resources */,
-				5669FE431766C47700B8630B /* icon-error@2x.png in Resources */,
-				5669FE441766C47700B8630B /* icon-info.png in Resources */,
-				5669FE451766C47700B8630B /* icon-info@2x.png in Resources */,
-				5669FE461766C47700B8630B /* icon-success.png in Resources */,
-				5669FE471766C47700B8630B /* icon-success@2x.png in Resources */,
+				9D85D5781C311A5F00A36F17 /* ic_msg_info@2x.png in Resources */,
+				9D85D5771C311A5F00A36F17 /* ic_msg_info.png in Resources */,
+				9D85D5751C311A5F00A36F17 /* ic_msg_error.png in Resources */,
+				9D85D5761C311A5F00A36F17 /* ic_msg_error@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +292,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -341,7 +340,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MessageBarManagerDemo/MessageBarManagerDemo-Prefix.pch";
 				INFOPLIST_FILE = "MessageBarManagerDemo/MessageBarManagerDemo-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.terryworona.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -353,7 +351,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MessageBarManagerDemo/MessageBarManagerDemo-Prefix.pch";
 				INFOPLIST_FILE = "MessageBarManagerDemo/MessageBarManagerDemo-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.terryworona.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

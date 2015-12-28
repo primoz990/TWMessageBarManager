@@ -17,6 +17,15 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
     TWMessageBarMessageTypeInfo
 };
 
+/**
+ * //PrimozR: defined preset duration types
+ */
+typedef NS_ENUM(NSInteger, TWMessageBarDurationType) {
+    TWMessageBarDurationTypeShort = 3,
+    TWMessageBarDurationTypeLong = 6,
+    TWMessageBarDurationTypePersistent = -1
+};
+
 @protocol TWMessageBarStyleSheet <NSObject>
 
 /**
@@ -26,7 +35,7 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
  *
  *  @return UIColor istance representing the message view's background color.
  */
-- (nonnull UIColor *)backgroundColorForMessageType:(TWMessageBarMessageType)type;
+- (UIColor *)backgroundColorForMessageType:(TWMessageBarMessageType)type;
 
 /**
  *  Bottom stroke color of message view.
@@ -35,7 +44,7 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
  *
  *  @return UIColor istance representing the message view's bottom stroke color.
  */
-- (nonnull UIColor *)strokeColorForMessageType:(TWMessageBarMessageType)type;
+- (UIColor *)strokeColorForMessageType:(TWMessageBarMessageType)type;
 
 /**
  *  Icon image of the message view.
@@ -44,7 +53,7 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
  *
  *  @return UIImage istance representing the message view's icon.
  */
-- (nonnull UIImage *)iconImageForMessageType:(TWMessageBarMessageType)type;
+- (UIImage *)iconImageForMessageType:(TWMessageBarMessageType)type;
 
 @optional
 
@@ -57,7 +66,7 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
  *
  *  @return UIFont instance representing the title font.
  */
-- (nonnull UIFont *)titleFontForMessageType:(TWMessageBarMessageType)type;
+- (UIFont *)titleFontForMessageType:(TWMessageBarMessageType)type;
 
 /**
  *  The (optional) UIFont to be used for the message's description.
@@ -68,7 +77,7 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
  *
  *  @return UIFont instance representing the description font.
  */
-- (nonnull UIFont *)descriptionFontForMessageType:(TWMessageBarMessageType)type;
+- (UIFont *)descriptionFontForMessageType:(TWMessageBarMessageType)type;
 
 /**
  *  The (optional) UIColor to be used for the message's title.
@@ -79,7 +88,7 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
  *
  *  @return UIColor instance representing the title color.
  */
-- (nonnull UIColor *)titleColorForMessageType:(TWMessageBarMessageType)type;
+- (UIColor *)titleColorForMessageType:(TWMessageBarMessageType)type;
 
 /**
  *  The (optional) UIColor to be used for the message's description.
@@ -90,7 +99,7 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
  *
  *  @return UIColor instance representing the description color.
  */
-- (nonnull UIColor *)descriptionColorForMessageType:(TWMessageBarMessageType)type;
+- (UIColor *)descriptionColorForMessageType:(TWMessageBarMessageType)type;
 
 @end
 
@@ -101,7 +110,7 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
  *
  *  @return MessageBarManager instance (singleton).
  */
-+ (nonnull TWMessageBarManager *)sharedInstance;
++ (TWMessageBarManager *)sharedInstance;
 
 /**
  *  Default display duration for each message.
@@ -112,18 +121,10 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
 + (CGFloat)defaultDuration;
 
 /**
- *  The orientations supported by the manager. 
- *  In most cases, this value will match the caller's orientation mask. 
- *
- *  @return Default behaviour - all orientations.
- */
-@property (nonatomic, assign) UIInterfaceOrientationMask managerSupportedOrientationsMask;
-
-/**
  *  An object conforming to the TWMessageBarStyleSheet protocol defines the message bar's look and feel.
  *  If no style sheet is supplied, a default class is provided on initialization (see implementation for details).
  */
-@property (nonnull, nonatomic, strong) NSObject<TWMessageBarStyleSheet> *styleSheet;
+@property (nonatomic, strong) NSObject<TWMessageBarStyleSheet> *styleSheet;
 
 /**
  *  Shows a message with the supplied title, description and type.
@@ -132,7 +133,7 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
  *  @param description  Description text in the message view.
  *  @param type         Type dictates color, stroke and icon shown in the message view.
  */
-- (void)showMessageWithTitle:(nullable NSString *)title description:(nullable NSString *)description type:(TWMessageBarMessageType)type;
+//PrimozR: - (void)showMessageWithTitle:(NSString *)title description:(NSString *)description type:(TWMessageBarMessageType)type;
 
 /**
  *  Shows a message with the supplied title, description, type & callback block.
@@ -142,7 +143,7 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
  *  @param type         Type dictates color, stroke and icon shown in the message view.
  *  @param callback     Callback block to be executed if a message is tapped.
  */
-- (void)showMessageWithTitle:(nullable NSString *)title description:(nullable NSString *)description type:(TWMessageBarMessageType)type callback:(nullable void (^)())callback;
+//PrimozR: - (void)showMessageWithTitle:(NSString *)title description:(NSString *)description type:(TWMessageBarMessageType)type callback:(void (^)())callback;
 
 /**
  *  Shows a message with the supplied title, description, type & duration.
@@ -152,7 +153,7 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
  *  @param type         Type dictates color, stroke and icon shown in the message view.
  *  @param duration     Default duration is 3 seconds, this can be overridden by supplying an optional duration parameter.
  */
-- (void)showMessageWithTitle:(nullable NSString *)title description:(nullable NSString *)description type:(TWMessageBarMessageType)type duration:(CGFloat)duration;
+//PrimozR: - (void)showMessageWithTitle:(NSString *)title description:(NSString *)description type:(TWMessageBarMessageType)type duration:(CGFloat)duration;
 
 /**
  *  Shows a message with the supplied title, description, type, duration and callback block.
@@ -163,7 +164,8 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
  *  @param duration     Default duration is 3 seconds, this can be overridden by supplying an optional duration parameter.
  *  @param callback     Callback block to be executed if a message is tapped.
  */
-- (void)showMessageWithTitle:(nullable NSString *)title description:(nullable NSString *)description type:(TWMessageBarMessageType)type duration:(CGFloat)duration callback:(nullable void (^)())callback;
+
+//PrimozR: - (void)showMessageWithTitle:(NSString *)title description:(NSString *)description type:(TWMessageBarMessageType)type duration:(CGFloat)duration callback:(void (^)())callback;
 
 /**
  *  Shows a message with the supplied title, description, type, status bar style and callback block.
@@ -174,7 +176,7 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
  *  @param statusBarStyle   Applied during the presentation of the message. If not supplied, style will default to UIStatusBarStyleDefault.
  *  @param callback         Callback block to be executed if a message is tapped.
  */
-- (void)showMessageWithTitle:(nullable NSString *)title description:(nullable NSString *)description type:(TWMessageBarMessageType)type statusBarStyle:(UIStatusBarStyle)statusBarStyle callback:(nullable void (^)())callback;
+//PrimozR: - (void)showMessageWithTitle:(NSString *)title description:(NSString *)description type:(TWMessageBarMessageType)type statusBarStyle:(UIStatusBarStyle)statusBarStyle callback:(void (^)())callback;
 
 /**
  *  Shows a message with the supplied title, description, type, duration, status bar style and callback block.
@@ -186,7 +188,7 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
  *  @param statusBarStyle   Applied during the presentation of the message. If not supplied, style will default to UIStatusBarStyleDefault.
  *  @param callback         Callback block to be executed if a message is tapped.
  */
-- (void)showMessageWithTitle:(nullable NSString *)title description:(nullable NSString *)description type:(TWMessageBarMessageType)type duration:(CGFloat)duration statusBarStyle:(UIStatusBarStyle)statusBarStyle callback:(nullable void (^)())callback;
+//PrimozR: - (void)showMessageWithTitle:(NSString *)title description:(NSString *)description type:(TWMessageBarMessageType)type duration:(CGFloat)duration statusBarStyle:(UIStatusBarStyle)statusBarStyle callback:(void (^)())callback;
 
 /**
  *  Shows a message with the supplied title, description, type, status bar hidden toggle and callback block.
@@ -197,7 +199,7 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
  *  @param statusBarHidden  Status bars are shown by default. To hide it during the presentation of a message, set to NO.
  *  @param callback         Callback block to be executed if a message is tapped.
  */
-- (void)showMessageWithTitle:(nullable NSString *)title description:(nullable NSString *)description type:(TWMessageBarMessageType)type statusBarHidden:(BOOL)statusBarHidden callback:(nullable void (^)())callback;
+//PrimozR: - (void)showMessageWithTitle:(NSString *)title description:(NSString *)description type:(TWMessageBarMessageType)type statusBarHidden:(BOOL)statusBarHidden callback:(void (^)())callback;
 
 /**
  *  Shows a message with the supplied title, description, type, duration, status bar hidden toggle and callback block.
@@ -209,7 +211,10 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
  *  @param statusBarHidden  Status bars are shown by default. To hide it during the presentation of a message, set to NO.
  *  @param callback         Callback block to be executed if a message is tapped.
  */
-- (void)showMessageWithTitle:(nullable NSString *)title description:(nullable NSString *)description type:(TWMessageBarMessageType)type duration:(CGFloat)duration statusBarHidden:(BOOL)statusBarHidden callback:(nullable void (^)())callback;
+//PrimozR: - (void)showMessageWithTitle:(NSString *)title description:(NSString *)description type:(TWMessageBarMessageType)type duration:(CGFloat)duration statusBarHidden:(BOOL)statusBarHidden callback:(void (^)())callback;
+
+//PrimozR: added one single function to show messages
+- (void)showMessageWithTitle:(NSString *)title description:(NSString *)description type:(TWMessageBarMessageType)type durationType:(TWMessageBarDurationType)durationType callback:(void (^)())callback;
 
 /**
  *  Hides the topmost message and removes all remaining messages in the queue.
@@ -228,6 +233,6 @@ typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
  *
  *  @return YES if the device instance is running an OS >= 7, otherwise NO.
  */
-- (BOOL)tw_isRunningiOS7OrLater;
+- (BOOL)isRunningiOS7OrLater;
 
 @end
