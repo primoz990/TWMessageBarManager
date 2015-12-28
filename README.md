@@ -1,3 +1,5 @@
+This is a fork of terryworona/TWMessageBarManager with design and behaviour changes.
+
 # TWMessageBarManager
 
 An iOS manager for presenting system-wide notifications via a dropdown message bar. 
