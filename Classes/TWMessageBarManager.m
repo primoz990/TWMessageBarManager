@@ -20,9 +20,6 @@
 #define ALPHA_MESSAGE_BAR_INFO 0.90
 #define FONT_SIZE_MESSAGE_BAR_TITLE 14.0
 #define FONT_SIZE_MESSAGE_BAR_MESSAGE 14.0
-//Fonts
-#define FONT_HELVETICA_NEUE_REGULAR @"HelveticaNeue"
-#define FONT_HELVETICA_NEUE_BOLD @"HelveticaNeue-Bold"
 
 // Numerics (TWMessageBarStyleSheet)
 CGFloat const kTWMessageBarStyleSheetMessageBarAlpha = 0.96f;
@@ -488,11 +485,11 @@ static UIColor *kTWDefaultMessageBarStyleSheetInfoStrokeColor = nil;
     if (self == [TWMessageView class])
     {
         // Fonts
-        //PrimozR: override default fonts
+        //PrimozR: customized font sizes
         //kTWMessageViewTitleFont = [UIFont boldSystemFontOfSize:16.0];
         //kTWMessageViewDescriptionFont = [UIFont systemFontOfSize:14.0];
-        kTWMessageViewTitleFont = [UIFont fontWithName:FONT_HELVETICA_NEUE_BOLD size:FONT_SIZE_MESSAGE_BAR_TITLE];
-        kTWMessageViewDescriptionFont = [UIFont fontWithName:FONT_HELVETICA_NEUE_REGULAR size:FONT_SIZE_MESSAGE_BAR_MESSAGE];
+        kTWMessageViewTitleFont = [UIFont boldSystemFontOfSize:FONT_SIZE_MESSAGE_BAR_TITLE];
+        kTWMessageViewDescriptionFont = [UIFont systemFontOfSize:FONT_SIZE_MESSAGE_BAR_MESSAGE];
 
         // Colors
         kTWMessageViewTitleColor = [UIColor colorWithWhite:1.0 alpha:1.0];
