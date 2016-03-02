@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Primoz990-TWMessageBarManager"
-  s.version      = "1.7.5"
+  s.version      = "1.7.6"
   s.summary      = "This is a fork of terryworona/TWMessageBarManager with design and behaviour changes."
   s.homepage     = "https://github.com/primoz990/TWMessageBarManager"
   s.screenshot   = "https://raw.githubusercontent.com/primoz990/TWMessageBarManager/master/Screenshots/main.png"
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author       = { "Primoz990" => "prezek2@gmail.com" }
   s.source       = { 
 	:git => "https://github.com/primoz990/TWMessageBarManager.git",
-	:tag => "v1.7.5"
+	:tag => "1.7.6"
   }
 
   s.platform = :ios, '7.0'
