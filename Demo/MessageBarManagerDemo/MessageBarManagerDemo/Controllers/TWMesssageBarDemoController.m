@@ -137,6 +137,50 @@ static UIColor *kTWMesssageBarDemoControllerButtonColor = nil;
                                                           type:TWMessageBarMessageTypeError
                                                   durationType:TWMessageBarDurationTypeShort
                                                       callback:nil];
+    /*
+    //Multiple scenarios for easier testing
+    [[TWMessageBarManager sharedInstance] showMessageWithTitle:nil
+                                                   description:@"lorem ipsum bla bla"
+                                                          type:TWMessageBarMessageTypeSuccess
+                                                  durationType:TWMessageBarDurationTypeLong
+                                                      callback:nil];
+
+    [[TWMessageBarManager sharedInstance] showMessageWithTitle:nil
+                                                   description:@"lorem ipsum bla bla karneke lorem ipsume bla bla, lorem ipsum bla bla karneke lorem ipsume bla bla, lorem ipsum bla bla karneke lorem ipsume bla bla, lorem ipsum bla bla karneke lorem ipsume bla bla, lorem ipsum bla bla karneke lorem ipsume bla bla."
+                                                          type:TWMessageBarMessageTypeSuccess
+                                                  durationType:TWMessageBarDurationTypeLong
+                                                      callback:nil];
+
+    [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"lorem ipsum bla bla"
+                                                   description:nil
+                                                          type:TWMessageBarMessageTypeInfo
+                                                  durationType:TWMessageBarDurationTypeLong
+                                                      callback:nil];
+
+    [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"lorem ipsum bla bla karneke lorem ipsume bla bla, lorem ipsum bla bla karneke lorem ipsume bla bla, lorem ipsum bla bla karneke lorem ipsume bla bla, lorem ipsum bla bla karneke lorem ipsume bla bla, lorem ipsum bla bla karneke lorem ipsume bla bla."
+                                                   description:nil
+                                                          type:TWMessageBarMessageTypeInfo
+                                                  durationType:TWMessageBarDurationTypeLong
+                                                      callback:nil];
+
+    [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"lorem ipsum bla bla"
+                                                   description:@"lorem ipsum bla lorem ipsum bla"
+                                                          type:TWMessageBarMessageTypeError
+                                                  durationType:TWMessageBarDurationTypeLong
+                                                      callback:nil];
+
+    [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"lorem ipsum bla bla karneke lorem ipsume bla bla, lorem ipsum bla bla karneke lorem ipsume bla bla, lorem ipsum bla bla karneke lorem ipsume bla bla, lorem ipsum bla bla karneke lorem ipsume bla bla, lorem ipsum bla bla karneke lorem ipsume bla bla."
+                                                   description:@"lorem ipsum bla bla karneke lorem ipsume bla bla, lorem ipsum bla bla karneke lorem ipsume bla bla, lorem ipsum bla bla karneke lorem ipsume bla bla, lorem ipsum bla bla karneke lorem ipsume bla bla, lorem ipsum bla bla karneke lorem ipsume bla bla."
+                                                          type:TWMessageBarMessageTypeError
+                                                  durationType:TWMessageBarDurationTypeLong
+                                                      callback:nil];
+
+    [[TWMessageBarManager sharedInstance] showMessageWithTitle:nil
+                                                   description:nil
+                                                          type:TWMessageBarMessageTypeError
+                                                  durationType:TWMessageBarDurationTypeLong
+                                                      callback:nil];
+     */
 }
 
 - (void)successButtonPressed:(id)sender

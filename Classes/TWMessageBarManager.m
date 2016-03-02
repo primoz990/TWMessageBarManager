@@ -588,15 +588,21 @@ static UIColor *kTWDefaultMessageBarStyleSheetInfoStrokeColor = nil;
         CGSize titleLabelSize = [self titleSize];
         CGSize descriptionLabelSize = [self descriptionSize];
 
-        if (self.titleString && !self.descriptionString)
-        {
-            yOffset = ceil(rect.size.height * 0.5) - ceil(titleLabelSize.height * 0.5) - kTWMessageViewTextOffset;
-        }
+        //PrimozR: This seems to be useless? I've commented this out
+//        if (self.titleString && !self.descriptionString)
+//        {
+//            yOffset = ceil(rect.size.height * 0.5) - ceil(titleLabelSize.height * 0.5) - kTWMessageViewTextOffset;
+//        }
 
         if ([[UIDevice currentDevice] isRunningiOS7OrLater])
         {
             NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
             paragraphStyle.alignment = NSTextAlignmentLeft;
+
+            //PrimozR: if no description set offset to title label
+            if(descriptionLabelSize.height<=0 && titleLabelSize.height<kTWMessageViewIconSize){
+                yOffset += (kTWMessageViewIconSize - titleLabelSize.height);
+            }
 
             [[self titleColor] set];
             [self.titleString drawWithRect:CGRectMake(xOffset, yOffset, titleLabelSize.width, titleLabelSize.height)
@@ -604,7 +610,12 @@ static UIColor *kTWDefaultMessageBarStyleSheetInfoStrokeColor = nil;
                                 attributes:@{NSFontAttributeName:[self titleFont], NSForegroundColorAttributeName:[self titleColor], NSParagraphStyleAttributeName:paragraphStyle}
                                    context:nil];
 
-            yOffset += titleLabelSize.height;
+            //PrimozR: if no title, set offset to description label
+            if(titleLabelSize.height<=0 && descriptionLabelSize.height<kTWMessageViewIconSize){
+                yOffset += (kTWMessageViewIconSize - descriptionLabelSize.height);
+            }else{
+                yOffset += titleLabelSize.height;
+            }
 
             [[self descriptionColor] set];
             [self.descriptionString drawWithRect:CGRectMake(xOffset, yOffset, descriptionLabelSize.width, descriptionLabelSize.height)
