@@ -14,7 +14,8 @@
 typedef NS_ENUM(NSInteger, TWMessageBarMessageType) {
     TWMessageBarMessageTypeError,
     TWMessageBarMessageTypeSuccess,
-    TWMessageBarMessageTypeInfo
+    TWMessageBarMessageTypeInfo,
+    TWMessageBarMessageTypeNotification
 };
 
 /**

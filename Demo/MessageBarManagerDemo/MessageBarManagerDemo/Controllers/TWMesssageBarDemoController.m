@@ -26,12 +26,14 @@ static UIColor *kTWMesssageBarDemoControllerButtonColor = nil;
 @property (nonatomic, strong) UIButton *errorButton;
 @property (nonatomic, strong) UIButton *successButton;
 @property (nonatomic, strong) UIButton *infoButton;
+@property (nonatomic, strong) UIButton *notificationButton;
 @property (nonatomic, strong) UIButton *hideAllButton;
 
 // Button presses
 - (void)errorButtonPressed:(id)sender;
 - (void)successButtonPressed:(id)sender;
 - (void)infoButtonPressed:(id)sender;
+- (void)notificationButtonPressed:(id)sender;
 - (void)hideAllButtonPressed:(id)sender;
 
 // Generators
@@ -75,7 +77,7 @@ static UIColor *kTWMesssageBarDemoControllerButtonColor = nil;
     self.view.backgroundColor = [UIColor whiteColor];
     
     CGFloat xOffset = kTWMesssageBarDemoControllerButtonPadding;
-    CGFloat totalheight = (kTWMesssageBarDemoControllerButtonHeight * 4) + (kTWMesssageBarDemoControllerButtonPadding * 3);
+    CGFloat totalheight = (kTWMesssageBarDemoControllerButtonHeight * 5) + (kTWMesssageBarDemoControllerButtonPadding * 4);
     CGFloat yOffset = ceil(self.view.bounds.size.height * 0.5) - ceil(totalheight * 0.5);
     
     self.errorButton = [self buttonWithTitle:kStringButtonLabelErrorMessage];
@@ -96,6 +98,13 @@ static UIColor *kTWMesssageBarDemoControllerButtonColor = nil;
     self.infoButton.frame = CGRectMake(xOffset, yOffset, self.view.bounds.size.width - (xOffset * 2), kTWMesssageBarDemoControllerButtonHeight);
     [self.infoButton addTarget:self action:@selector(infoButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.infoButton];
+
+    yOffset += kTWMesssageBarDemoControllerButtonHeight + kTWMesssageBarDemoControllerButtonPadding;
+
+    self.notificationButton = [self buttonWithTitle:kStringButtonLabelNotificationMessage];
+    self.notificationButton.frame = CGRectMake(xOffset, yOffset, self.view.bounds.size.width - (xOffset * 2), kTWMesssageBarDemoControllerButtonHeight);
+    [self.notificationButton addTarget:self action:@selector(notificationButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.notificationButton];
     
     yOffset += kTWMesssageBarDemoControllerButtonHeight + kTWMesssageBarDemoControllerButtonPadding;
 
@@ -197,6 +206,15 @@ static UIColor *kTWMesssageBarDemoControllerButtonColor = nil;
     [[TWMessageBarManager sharedInstance] showMessageWithTitle:kStringMessageBarInfoTitle
                                                    description:kStringMessageBarInfoMessage
                                                           type:TWMessageBarMessageTypeInfo
+                                                  durationType:TWMessageBarDurationTypeShort
+                                                      callback:nil];
+}
+
+- (void)notificationButtonPressed:(id)sender
+{
+    [[TWMessageBarManager sharedInstance] showMessageWithTitle:kStringMessageBarNotificationTitle
+                                                   description:kStringMessageBarNotificationMessage
+                                                          type:TWMessageBarMessageTypeNotification
                                                   durationType:TWMessageBarDurationTypeShort
                                                       callback:nil];
 }

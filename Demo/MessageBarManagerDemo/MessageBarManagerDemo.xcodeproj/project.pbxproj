@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0754A4CC1E719C4900411E8C /* ic_msg_notification.png in Resources */ = {isa = PBXBuildFile; fileRef = 0754A4CA1E719C4900411E8C /* ic_msg_notification.png */; };
+		0754A4CD1E719C4900411E8C /* ic_msg_notification@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0754A4CB1E719C4900411E8C /* ic_msg_notification@2x.png */; };
 		561DB437174AFADA006D7D1E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561DB434174AFADA006D7D1E /* Default-568h@2x.png */; };
 		561DB438174AFADA006D7D1E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 561DB435174AFADA006D7D1E /* Default.png */; };
 		561DB439174AFADA006D7D1E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561DB436174AFADA006D7D1E /* Default@2x.png */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0754A4CA1E719C4900411E8C /* ic_msg_notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_msg_notification.png; sourceTree = "<group>"; };
+		0754A4CB1E719C4900411E8C /* ic_msg_notification@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_msg_notification@2x.png"; sourceTree = "<group>"; };
 		561DB434174AFADA006D7D1E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		561DB435174AFADA006D7D1E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		561DB436174AFADA006D7D1E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 				9D85D5721C311A5F00A36F17 /* ic_msg_info@2x.png */,
 				9D85D5731C311A5F00A36F17 /* ic_msg_success.png */,
 				9D85D5741C311A5F00A36F17 /* ic_msg_success@2x.png */,
+				0754A4CA1E719C4900411E8C /* ic_msg_notification.png */,
+				0754A4CB1E719C4900411E8C /* ic_msg_notification@2x.png */,
 			);
 			name = Icons;
 			path = ../../../../Classes/Icons;
@@ -245,6 +251,8 @@
 				561DB439174AFADA006D7D1E /* Default@2x.png in Resources */,
 				9D85D5781C311A5F00A36F17 /* ic_msg_info@2x.png in Resources */,
 				9D85D5771C311A5F00A36F17 /* ic_msg_info.png in Resources */,
+				0754A4CC1E719C4900411E8C /* ic_msg_notification.png in Resources */,
+				0754A4CD1E719C4900411E8C /* ic_msg_notification@2x.png in Resources */,
 				9D85D5751C311A5F00A36F17 /* ic_msg_error.png in Resources */,
 				9D85D5761C311A5F00A36F17 /* ic_msg_error@2x.png in Resources */,
 			);

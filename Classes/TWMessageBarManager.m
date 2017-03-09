@@ -15,9 +15,11 @@
 #define COLOR_MESSAGE_BAR_ERROR @"#FF3B2F"
 #define COLOR_MESSAGE_BAR_SUCCESS @"#4BD963"
 #define COLOR_MESSAGE_BAR_INFO @"#0079FF"
+#define COLOR_MESSAGE_BAR_NOTIFICATION @"#bfbfbf"
 #define ALPHA_MESSAGE_BAR_ERROR 0.95
 #define ALPHA_MESSAGE_BAR_SUCCESS 0.95
 #define ALPHA_MESSAGE_BAR_INFO 0.90
+#define ALPHA_MESSAGE_BAR_NOTIFICATION 0.90
 #define FONT_SIZE_MESSAGE_BAR_TITLE 14.0
 #define FONT_SIZE_MESSAGE_BAR_MESSAGE 14.0
 
@@ -44,9 +46,11 @@ CGFloat const kTWMessageBarManagerPanVelocity = 0.2f;
 CGFloat const kTWMessageBarManagerPanAnimationDuration = 0.0002f;
 
 // Strings (TWMessageBarStyleSheet)
-NSString * const kTWMessageBarStyleSheetImageIconError = @"ic_msg_error.png";//PrimozR: renamed from: icon-error.png
-NSString * const kTWMessageBarStyleSheetImageIconSuccess = @"ic_msg_success.png";//PrimozR: renamed from: icon-success.png
-NSString * const kTWMessageBarStyleSheetImageIconInfo = @"ic_msg_info.png";//PrimozR: renamed from: icon-info.png
+NSString * const kTWMessageBarStyleSheetImageIconError = @"ic_msg_error@2x.png";//PrimozR: renamed from: icon-error.png
+NSString * const kTWMessageBarStyleSheetImageIconSuccess = @"ic_msg_success@2x.png";//PrimozR: renamed from: icon-success.png
+NSString * const kTWMessageBarStyleSheetImageIconInfo = @"ic_msg_info@2x.png";//PrimozR: renamed from: icon-info.png
+NSString * const kTWMessageBarStyleSheetImageIconNotification = @"ic_msg_notification@2x.png";//PrimozR: renamed from: icon-info.png
+
 
 // Fonts (TWMessageView)
 static UIFont *kTWMessageViewTitleFont = nil;
@@ -60,9 +64,13 @@ static UIColor *kTWMessageViewDescriptionColor = nil;
 static UIColor *kTWDefaultMessageBarStyleSheetErrorBackgroundColor = nil;
 static UIColor *kTWDefaultMessageBarStyleSheetSuccessBackgroundColor = nil;
 static UIColor *kTWDefaultMessageBarStyleSheetInfoBackgroundColor = nil;
+static UIColor *kTWDefaultMessageBarStyleSheetNotificationBackgroundColor = nil;
+
 static UIColor *kTWDefaultMessageBarStyleSheetErrorStrokeColor = nil;
 static UIColor *kTWDefaultMessageBarStyleSheetSuccessStrokeColor = nil;
 static UIColor *kTWDefaultMessageBarStyleSheetInfoStrokeColor = nil;
+static UIColor *kTWDefaultMessageBarStyleSheetNotificationStrokeColor = nil;
+
 
 @protocol TWMessageViewDelegate;
 
@@ -829,11 +837,14 @@ static UIColor *kTWDefaultMessageBarStyleSheetInfoStrokeColor = nil;
         kTWDefaultMessageBarStyleSheetErrorBackgroundColor = [self colorFromHexString:COLOR_MESSAGE_BAR_ERROR withAlpha:ALPHA_MESSAGE_BAR_ERROR]; // red
         kTWDefaultMessageBarStyleSheetSuccessBackgroundColor = [self colorFromHexString:COLOR_MESSAGE_BAR_SUCCESS withAlpha:ALPHA_MESSAGE_BAR_SUCCESS]; // green
         kTWDefaultMessageBarStyleSheetInfoBackgroundColor = [self colorFromHexString:COLOR_MESSAGE_BAR_INFO withAlpha:ALPHA_MESSAGE_BAR_INFO]; // blue
+        kTWDefaultMessageBarStyleSheetNotificationBackgroundColor = [self colorFromHexString:COLOR_MESSAGE_BAR_NOTIFICATION withAlpha:ALPHA_MESSAGE_BAR_NOTIFICATION]; // blue
 
         // Colors (stroke)
         kTWDefaultMessageBarStyleSheetErrorStrokeColor = [UIColor colorWithRed:0.949f green:0.580f blue:0.0f alpha:1.0f]; // orange
         kTWDefaultMessageBarStyleSheetSuccessStrokeColor = [UIColor colorWithRed:0.0f green:0.772f blue:0.164f alpha:1.0f]; // green
         kTWDefaultMessageBarStyleSheetInfoStrokeColor = [UIColor colorWithRed:0.0f green:0.415f blue:0.803f alpha:1.0f]; // blue
+        kTWDefaultMessageBarStyleSheetNotificationStrokeColor = [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:1.0f]; // white
+
     }
 }
 
@@ -867,6 +878,9 @@ static UIColor *kTWDefaultMessageBarStyleSheetInfoStrokeColor = nil;
         case TWMessageBarMessageTypeInfo:
             backgroundColor = kTWDefaultMessageBarStyleSheetInfoBackgroundColor;
             break;
+        case TWMessageBarMessageTypeNotification:
+            backgroundColor = kTWDefaultMessageBarStyleSheetNotificationBackgroundColor;
+            break;
         default:
             break;
     }
@@ -887,6 +901,9 @@ static UIColor *kTWDefaultMessageBarStyleSheetInfoStrokeColor = nil;
         case TWMessageBarMessageTypeInfo:
             strokeColor = kTWDefaultMessageBarStyleSheetInfoStrokeColor;
             break;
+        case TWMessageBarMessageTypeNotification:
+            strokeColor = kTWDefaultMessageBarStyleSheetNotificationStrokeColor;
+            break;
         default:
             break;
     }
@@ -906,6 +923,9 @@ static UIColor *kTWDefaultMessageBarStyleSheetInfoStrokeColor = nil;
             break;
         case TWMessageBarMessageTypeInfo:
             iconImage = [UIImage imageNamed:kTWMessageBarStyleSheetImageIconInfo];
+            break;
+        case TWMessageBarMessageTypeNotification:
+            iconImage = [UIImage imageNamed:kTWMessageBarStyleSheetImageIconNotification];
             break;
         default:
             break;

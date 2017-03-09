@@ -72,6 +72,9 @@ NSString * const kAppDelegateDemoStyleSheetImageIconInfo = @"icon-info.png";
         case TWMessageBarMessageTypeInfo:
             backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:0.75];
             break;
+        case TWMessageBarMessageTypeNotification:
+            backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.75];
+            break;
         default:
             break;
     }
@@ -91,6 +94,9 @@ NSString * const kAppDelegateDemoStyleSheetImageIconInfo = @"icon-info.png";
             break;
         case TWMessageBarMessageTypeInfo:
             strokeColor = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:1.0];
+            break;
+        case TWMessageBarMessageTypeNotification:
+            strokeColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.75];
             break;
         default:
             break;

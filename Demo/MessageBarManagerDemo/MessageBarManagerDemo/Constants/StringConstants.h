@@ -16,10 +16,13 @@
 #define kStringMessageBarSuccessMessage localize(@"message.bar.success.message", @"This is a success message!")
 #define kStringMessageBarInfoTitle localize(@"message.bar.info.title", @"Information Title")
 #define kStringMessageBarInfoMessage localize(@"message.bar.info.message", @"This is an info message!")
+#define kStringMessageBarNotificationTitle localize(@"message.bar.notification.title", @"Notification Title")
+#define kStringMessageBarNotificationMessage localize(@"message.bar.notification.message", @"This is an notification message!")
 
 #pragma mark - Buttons
 
 #define kStringButtonLabelSuccessMessage localize(@"button.label.success.message", @"Success Message")
 #define kStringButtonLabelErrorMessage localize(@"button.label.error.message", @"Error Message")
 #define kStringButtonLabelInfoMessage localize(@"button.label.info.message", @"Information Message")
+#define kStringButtonLabelNotificationMessage localize(@"button.label.notification.message", @"Notification Message")
 #define kStringButtonLabelHideAll localize(@"button.label.hide.all", @"Hide All")
