@@ -15,11 +15,11 @@
 #define COLOR_MESSAGE_BAR_ERROR @"#FF3B2F"
 #define COLOR_MESSAGE_BAR_SUCCESS @"#4BD963"
 #define COLOR_MESSAGE_BAR_INFO @"#0079FF"
-#define COLOR_MESSAGE_BAR_NOTIFICATION @"#bfbfbf"
+#define COLOR_MESSAGE_BAR_NOTIFICATION @"#B3B3B7"
 #define ALPHA_MESSAGE_BAR_ERROR 0.95
 #define ALPHA_MESSAGE_BAR_SUCCESS 0.95
 #define ALPHA_MESSAGE_BAR_INFO 0.90
-#define ALPHA_MESSAGE_BAR_NOTIFICATION 0.90
+#define ALPHA_MESSAGE_BAR_NOTIFICATION 0.95
 #define FONT_SIZE_MESSAGE_BAR_TITLE 14.0
 #define FONT_SIZE_MESSAGE_BAR_MESSAGE 14.0
 
@@ -46,10 +46,10 @@ CGFloat const kTWMessageBarManagerPanVelocity = 0.2f;
 CGFloat const kTWMessageBarManagerPanAnimationDuration = 0.0002f;
 
 // Strings (TWMessageBarStyleSheet)
-NSString * const kTWMessageBarStyleSheetImageIconError = @"ic_msg_error@2x.png";//PrimozR: renamed from: icon-error.png
-NSString * const kTWMessageBarStyleSheetImageIconSuccess = @"ic_msg_success@2x.png";//PrimozR: renamed from: icon-success.png
-NSString * const kTWMessageBarStyleSheetImageIconInfo = @"ic_msg_info@2x.png";//PrimozR: renamed from: icon-info.png
-NSString * const kTWMessageBarStyleSheetImageIconNotification = @"ic_msg_notification@2x.png";//PrimozR: renamed from: icon-info.png
+NSString * const kTWMessageBarStyleSheetImageIconError = @"ic_msg_error.png";//PrimozR: renamed from: icon-error.png
+NSString * const kTWMessageBarStyleSheetImageIconSuccess = @"ic_msg_success.png";//PrimozR: renamed from: icon-success.png
+NSString * const kTWMessageBarStyleSheetImageIconInfo = @"ic_msg_info.png";//PrimozR: renamed from: icon-info.png
+NSString * const kTWMessageBarStyleSheetImageIconNotification = @"ic_msg_notification.png";//PrimozR: renamed from: icon-info.png
 
 
 // Fonts (TWMessageView)
